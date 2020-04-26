@@ -9,7 +9,8 @@ const orderRoutes = require('./api/routes/orders');
 const userRoutes = require('./api/routes/users');
 
 mongoose.connect('mongodb+srv://sumith:' + process.env.MONGO_ATLAS_PW + '@node-rest-shop-1tvdy.mongodb.net/test?retryWrites=true&w=majority', {
-    useMongoClient: true
+    // useMongoClient: true
+    useNewUrlParser: true
 });
 
 mongoose.Promise = global.Promise;
